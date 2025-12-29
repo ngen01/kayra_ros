@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="garp_amr">
+    <!--
+        GARP AMR - Ana Robot Modeli
+        Diferansiyel Sürüşlü Otonom Mobil Robot
+        (GARP için düzenlendi)
+    -->
+
+    <!-- ==================== RENK TANIMLARI ==================== -->
+    <material name="garp_blue">
+        <color rgba="0.1 0.3 0.6 1.0"/>
+    </material>
+    <material name="garp_orange">
+        <color rgba="0.9 0.4 0.1 1.0"/>
+    </material>
+    <material name="gray">
+        <color rgba="0.7 0.7 0.7 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <!-- ==================== ŞASE PARAMETRELERİ ==================== -->
+    <xacro:property name="chasis_len_x" value="0.6"/>
+    <xacro:property name="chasis_len_y" value="0.4"/>
+    <xacro:property name="chasis_len_z" value="0.2"/>
+    <xacro:property name="base_chasis_offset" value="0.08"/>
+    <xacro:property name="chasis_mass" value="2.0"/>
+
+    <!-- ==================== XACRO INCLUDE ==================== -->
+    <xacro:include filename="$(find garp_description)/urdf/wheels.urdf.xacro"/>
+    <xacro:include filename="$(find garp_description)/urdf/sensors.urdf.xacro"/>
+    <xacro:include filename="$(find garp_description)/urdf/gazebo_plugins.urdf.xacro"/>
+
+    <!-- ==================== BASE LINKS ==================== -->
+    <link name="base_footprint"/>
+
+    <link name="base_link"/>
+
+    <joint name="base_TO_footprint" type="fixed">
+        <origin xyz="0.0 0.0 ${wh_radius}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- ==================== ŞASE ==================== -->
+    <joint name="base_TO_chasis" type="fixed">
+        <origin xyz="0.0 0.0 ${base_chasis_offset}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="chasis"/>
+    </joint>
+
+    <link name="chasis">
+        <inertial>
+            <mass value="${chasis_mass}"/>
+            <inertia 
+                ixx="${chasis_mass * (chasis_len_y * chasis_len_y + chasis_len_z * chasis_len_z) / 12.0}"
+                iyy="${chasis_mass * (chasis_len_x * chasis_len_x + chasis_len_z * chasis_len_z) / 12.0}"
+                izz="${chasis_mass * (chasis_len_x * chasis_len_x + chasis_len_y * chasis_len_y) / 12.0}"
+                ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <box size="${chasis_len_x} ${chasis_len_y} ${chasis_len_z}"/>
+            </geometry>
+            <material name="garp_blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${chasis_len_x} ${chasis_len_y} ${chasis_len_z}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- ==================== ÜST KAPAK ==================== -->
+    <link name="top_plate">
+        <visual>
+            <geometry>
+                <box size="${chasis_len_x * 0.8} ${chasis_len_y * 0.8} 0.01"/>
+            </geometry>
+            <material name="garp_orange"/>
+        </visual>
+    </link>
+
+    <joint name="chasis_TO_top_plate" type="fixed">
+        <parent link="chasis"/>
+        <child link="top_plate"/>
+        <origin xyz="0 0 ${chasis_len_z/2 + 0.005}" rpy="0 0 0"/>
+    </joint>
+
+    <!-- ==================== TEKERLEKLERİ OLUŞTUR ==================== -->
+    <xacro:create_wh postfix="l" yfact="1.0"/>
+    <xacro:create_wh postfix="r" yfact="-1.0"/>
+
+    <!-- ==================== CASTER TEKERLEKLER (4 KÖŞE) ==================== -->
+    <xacro:create_cwh postfix="lf" xfact="1.0" yfact="1.0"/>
+    <xacro:create_cwh postfix="lb" xfact="-1.0" yfact="1.0"/>
+    <xacro:create_cwh postfix="rf" xfact="1.0" yfact="-1.0"/>
+    <xacro:create_cwh postfix="rb" xfact="-1.0" yfact="-1.0"/>
+
+</robot>

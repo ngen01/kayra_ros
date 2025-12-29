@@ -1,0 +1,29 @@
+# Build
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ROS
+*.bag
+*.db3
+
+# Maps (optional - might want to keep)
+# *.pgm
+# *.yaml
+
+# OS
+.DS_Store
+Thumbs.db

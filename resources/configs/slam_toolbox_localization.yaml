@@ -1,0 +1,76 @@
+# slam_toolbox Lokalizasyon Parametreleri
+# GARPamr_edu - Örnek Konfigürasyon
+#
+# Bu dosya var olan bir haritada konumlama için kullanılır.
+# Önce haritalama ile harita oluşturulmalı, sonra bu mod kullanılmalıdır.
+
+slam_toolbox:
+  ros__parameters:
+    # ==============================================================
+    # MOD: LOCALIZATION
+    # ==============================================================
+    mode: localization
+    
+    # Harita dosyası (serialize edilmiş slam_toolbox formatı)
+    # map_file_name: /path/to/saved_map
+    # map_start_pose: [0.0, 0.0, 0.0]  # [x, y, theta]
+
+    # ==============================================================
+    # SOLVER PARAMETRELERİ
+    # ==============================================================
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_loss_function: None
+
+    # ==============================================================
+    # ROS PARAMETRELERİ
+    # ==============================================================
+    odom_frame: odom_frame
+    map_frame: map
+    base_frame: base_footprint
+    scan_topic: /lidar/scan
+
+    # ==============================================================
+    # HARİTA AYARLARI (Lokalizasyonda sabit)
+    # ==============================================================
+    resolution: 0.05
+    max_laser_range: 12.0
+    
+    # Lokalizasyonda harita güncellenmiyor
+    map_update_interval: 0.0
+
+    # ==============================================================
+    # TRANSFORM AYARLARI
+    # ==============================================================
+    transform_publish_period: 0.02
+    transform_timeout: 0.2
+    tf_buffer_duration: 30.0
+
+    # ==============================================================
+    # HAREKET EŞİKLERİ (Lokalizasyonda daha düşük olabilir)
+    # ==============================================================
+    minimum_time_interval: 0.3
+    minimum_travel_distance: 0.2
+    minimum_travel_heading: 0.2
+
+    # ==============================================================
+    # SCAN MATCHING
+    # ==============================================================
+    use_scan_matching: true
+    use_scan_barycenter: true
+    scan_buffer_size: 10
+    scan_buffer_maximum_scan_distance: 10.0
+
+    # ==============================================================
+    # LOOP CLOSURE (Lokalizasyonda kapalı tutulabilir)
+    # ==============================================================
+    do_loop_closing: false
+
+    # ==============================================================
+    # DİĞER
+    # ==============================================================
+    debug_logging: false
+    throttle_scans: 1
+    enable_interactive_mode: false
