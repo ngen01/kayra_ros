@@ -7,7 +7,7 @@
 | [Tavsiye Edilen Süreç.md](./Tavsiye%20Edilen%20Süreç.md) | Öğrenme yolu önerileri |
 
 
-## 🛠️ Gereksinimler
+## Gereksinimler
 
 - **Ubuntu 24.04**
 - **ROS2 Jazzy** 
