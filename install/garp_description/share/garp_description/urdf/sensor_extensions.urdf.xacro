@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="lidar_radius" value="0.05" />
+    <xacro:property name="lidar_length" value="0.02" />
+
+    <link name="lidar">
+        <visual>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_length}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_length}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="chasis_TO_lidar" type="fixed">
+        <parent link="chasis" />
+        <child link="lidar" />
+        <origin xyz="0 0 ${chasis_len_z / 2.0 + lidar_length / 2.0}" rpy="0 0 0" />
+    </joint>
+
+    <gazebo>
+        <!-- Genel sensör sistemi: Tüm sensörlerin temel çalışma altyapısını sağlar -->
+        <plugin filename="gz-sim-sensors-system"
+                name="gz::sim::systems::Sensors">
+
+            <!-- Kamera ve GPU lidar gibi sensörler için render motoru.
+                Ogre2 çoğu modern simülasyon için önerilir. -->
+            <render_engine>ogre2</render_engine>
+        </plugin>  
+    </gazebo>
+
+    <gazebo reference="lidar">
+        <sensor name="gpu_lidar" type="gpu_lidar">
+            <!-- Sensörün modele göre konumu -->
+            <pose>0 0 0 0 0 0</pose>
+
+            <!-- Yayınlanacak Gazebo topic adı -->
+            <topic>lidar/scan</topic>
+
+            <!-- Saniyede 10 kez ölçüm üret -->
+            <update_rate>10</update_rate>
+
+            <!-- GPU tabanlı ray sensor yapılandırması -->
+            <ray>
+                <scan>
+                <horizontal>
+                    <!-- Kaç adet ışın gönderileceği -->
+                    <samples>640</samples>
+
+                    <!-- Işın çözünürlüğü (1 = birebir, 2 = her 2 ışında 1 hesaplama) -->
+                    <resolution>1</resolution>
+
+                    <!-- Taramanın sol sınırı -->
+                    <min_angle>-1.57</min_angle>
+
+                    <!-- Taramanın sağ sınırı -->
+                    <max_angle>1.57</max_angle>
+                </horizontal>
+                </scan>
+
+                <!-- Mesafe ölçüm parametreleri -->
+                <range>
+                <!-- Sensörün minimum algılama mesafesi -->
+                <min>0.08</min>
+
+                <!-- Maksimum algılama mesafesi -->
+                <max>15.0</max>
+
+                <!-- Mesafe çözünürlüğü -->
+                <resolution>0.01</resolution>
+                </range>
+            </ray>
+
+            <!-- Veriyi kaydedilebilir hâle getirmek için -->
+            <always_on>true</always_on>
+
+            <!-- Gazebo GUI’de lazer tarama çizgilerini göster -->
+            <visualize>true</visualize>
+
+            <gz_frame_id>lidar</gz_frame_id> 
+        </sensor>
+    
+    </gazebo>
+
+</robot>

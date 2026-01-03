@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="garp_robot">
+
+    <!-- Renk Tanımlamaları -->
+    <material name="green">
+        <color rgba="0 1 0 1"/>
+    </material>
+    <material name="gray">
+        <color rgba="0.7 0.7 0.7 1"/>
+    </material>
+
+    <!-- Şase Nitelikleri -->
+    <xacro:property name="chasis_len_x" value="0.6"/>
+    <xacro:property name="chasis_len_y" value="0.4"/>
+    <xacro:property name="chasis_len_z" value="0.2"/>
+    <xacro:property name="base_chasis_offset" value="0.08"/>
+    <xacro:property name="chasis_mass" value="2.0"/>
+
+    <!-- Tekerlek Nitelikleri -->
+    <xacro:property name="wh_radius" value="0.1"/>
+    <xacro:property name="wh_thick" value="0.04"/>
+    <xacro:property name="wh_chasis_gap" value="0.001"/>
+
+    <!-- Dosya Dahil Etme -->
+    <xacro:include filename="./wheels.urdf.xacro" />
+    <xacro:include filename="../config/g_plugins.urdf.xacro" />
+    <xacro:include filename="./sensor_extensions.urdf.xacro" />
+
+    <!-- Base Links -->
+    <link name="base_footprint"/>
+    <link name="base_link"/>
+
+    <joint name="base_TO_footprint" type="fixed">
+        <origin xyz="0.0 0.0 ${wh_radius}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- Şase -->
+    <joint name="base_TO_chasis" type="fixed">
+        <origin xyz="0.0 0.0 ${base_chasis_offset}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="chasis"/>
+    </joint>
+
+    <link name="chasis">
+        <inertial>
+            <mass value="${chasis_mass}"/>
+            <inertia 
+                ixx="${chasis_mass * (chasis_len_y*chasis_len_y + chasis_len_z*chasis_len_z) / 12.0}"
+                iyy="${chasis_mass * (chasis_len_x*chasis_len_x + chasis_len_z*chasis_len_z) / 12.0}"
+                izz="${chasis_mass * (chasis_len_x*chasis_len_x + chasis_len_y*chasis_len_y) / 12.0}"
+                ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <box size="${chasis_len_x} ${chasis_len_y} ${chasis_len_z}"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${chasis_len_x} ${chasis_len_y} ${chasis_len_z}"/>
+            </geometry>
+        </collision>
+    </link>
+
+</robot>
