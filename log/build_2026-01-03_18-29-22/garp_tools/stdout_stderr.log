@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/garp_tools/garp_tools.egg-info
+writing ../../build/garp_tools/garp_tools.egg-info/PKG-INFO
+writing dependency_links to ../../build/garp_tools/garp_tools.egg-info/dependency_links.txt
+writing entry points to ../../build/garp_tools/garp_tools.egg-info/entry_points.txt
+writing requirements to ../../build/garp_tools/garp_tools.egg-info/requires.txt
+writing top-level names to ../../build/garp_tools/garp_tools.egg-info/top_level.txt
+writing manifest file '../../build/garp_tools/garp_tools.egg-info/SOURCES.txt'
+reading manifest file '../../build/garp_tools/garp_tools.egg-info/SOURCES.txt'
+writing manifest file '../../build/garp_tools/garp_tools.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/omerb/garp7_ws/build/garp_tools/build
+creating /home/omerb/garp7_ws/build/garp_tools/build/lib
+creating /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools
+copying garp_tools/__init__.py -> /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools
+copying garp_tools/teleop_keyboard.py -> /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools
+copying garp_tools/odom_to_tf.py -> /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools
+running install
+running install_lib
+creating /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools
+copying /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools/__init__.py -> /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools
+copying /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools/teleop_keyboard.py -> /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools
+copying /home/omerb/garp7_ws/build/garp_tools/build/lib/garp_tools/odom_to_tf.py -> /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools
+byte-compiling /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools/teleop_keyboard.py to teleop_keyboard.cpython-312.pyc
+byte-compiling /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools/odom_to_tf.py to odom_to_tf.cpython-312.pyc
+running install_data
+creating /home/omerb/garp7_ws/install/garp_tools/share/ament_index
+creating /home/omerb/garp7_ws/install/garp_tools/share/ament_index/resource_index
+creating /home/omerb/garp7_ws/install/garp_tools/share/ament_index/resource_index/packages
+copying resource/garp_tools -> /home/omerb/garp7_ws/install/garp_tools/share/ament_index/resource_index/packages
+copying package.xml -> /home/omerb/garp7_ws/install/garp_tools/share/garp_tools
+running install_egg_info
+Copying ../../build/garp_tools/garp_tools.egg-info to /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools-0.0.0-py3.12.egg-info
+running install_scripts
+Installing odom_to_tf script to /home/omerb/garp7_ws/install/garp_tools/lib/garp_tools
+Installing teleop_keyboard script to /home/omerb/garp7_ws/install/garp_tools/lib/garp_tools
+writing list of installed files to '/home/omerb/garp7_ws/build/garp_tools/install.log'

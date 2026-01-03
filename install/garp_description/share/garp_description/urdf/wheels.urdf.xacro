@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Tahrik Tekerleği Makrosu -->
+    <xacro:macro name="create_wh" params="postfix yfact">
+        <joint name="base_TO_wh_${postfix}" type="continuous">
+            <origin xyz="0.0 ${yfact * (chasis_len_y / 2.0 + wh_thick / 2.0 + wh_chasis_gap)} 0.0"/>
+            <parent link="base_link"/>
+            <child link="wh_${postfix}"/>
+            <axis xyz="0.0 1.0 0.0"/>
+        </joint>
+
+        <link name="wh_${postfix}">
+            <inertial>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0"/>
+                <mass value="1.0"/>
+                <inertia ixx="0.01" iyy="0.01" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0"/>
+                <geometry>
+                    <cylinder radius="${wh_radius}" length="${wh_thick}"/>
+                </geometry>
+                <material name="gray"/>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0"/>
+                <geometry>
+                    <cylinder radius="${wh_radius}" length="${wh_thick}"/>
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+
+    <!-- Tekerlekleri Oluştur -->
+    <xacro:create_wh postfix="l" yfact="1.0"/>
+    <xacro:create_wh postfix="r" yfact="-1.0"/>
+
+    <!-- Caster Wheel Makrosu -->
+    <xacro:property name="cwh_radius" value="${(wh_radius - (chasis_len_z / 2.0 - base_chasis_offset)) / 2.0}"/>
+
+    <xacro:macro name="create_cwh" params="postfix xfact yfact">
+        <joint name="chasis_TO_cwh_${postfix}" type="fixed">
+            <origin xyz="${xfact * (chasis_len_x / 2.0 - 0.1)}
+                        ${yfact * (chasis_len_y / 2.0 - 0.1)}
+                        ${-1 * (chasis_len_z / 2.0 + cwh_radius)}"/>
+            <parent link="chasis"/>
+            <child link="cwh_${postfix}"/>
+        </joint>
+
+        <link name="cwh_${postfix}">
+            <inertial>
+                <mass value="0.01"/>
+                <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0" ixz="0" iyz="0"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <sphere radius="${cwh_radius}"/>
+                </geometry>
+                <material name="gray"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="${cwh_radius}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <gazebo reference="cwh_${postfix}">
+            <collision>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>0.001</mu>
+                            <mu2>0.001</mu2>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+        </gazebo>
+    </xacro:macro>
+
+    <xacro:create_cwh postfix="lf" xfact="1.0" yfact="1.0"/>
+    <xacro:create_cwh postfix="lb" xfact="-1.0" yfact="1.0"/>
+    <xacro:create_cwh postfix="rf" xfact="1.0" yfact="-1.0"/>
+    <xacro:create_cwh postfix="rb" xfact="-1.0" yfact="-1.0"/>
+
+</robot>

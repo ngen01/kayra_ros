@@ -1,0 +1,54 @@
+[0.017s] Invoking command in '/home/omerb/garp7_ws/build/garp_simulate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/omerb/garp7_ws/src/garp_simulate -DCMAKE_INSTALL_PREFIX=/home/omerb/garp7_ws/install/garp_simulate
+[0.083s] -- The C compiler identification is GNU 13.3.0
+[0.146s] -- The CXX compiler identification is GNU 13.3.0
+[0.169s] -- Detecting C compiler ABI info
+[0.252s] -- Detecting C compiler ABI info - done
+[0.263s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.263s] -- Detecting C compile features
+[0.264s] -- Detecting C compile features - done
+[0.278s] -- Detecting CXX compiler ABI info
+[0.371s] -- Detecting CXX compiler ABI info - done
+[0.380s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.380s] -- Detecting CXX compile features
+[0.381s] -- Detecting CXX compile features - done
+[0.384s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.535s] -- Found Python3: /home/omerb/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.655s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.755s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.755s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.756s] -- Added test 'lint_cmake' to check CMake code style
+[0.761s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.763s] -- Added test 'xmllint' to check XML markup files
+[0.764s] -- Configuring done (0.7s)
+[0.766s] -- Generating done (0.0s)
+[0.767s] -- Build files have been written to: /home/omerb/garp7_ws/build/garp_simulate
+[0.773s] Invoked command in '/home/omerb/garp7_ws/build/garp_simulate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/omerb/garp7_ws/src/garp_simulate -DCMAKE_INSTALL_PREFIX=/home/omerb/garp7_ws/install/garp_simulate
+[0.773s] Invoking command in '/home/omerb/garp7_ws/build/garp_simulate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/omerb/garp7_ws/build/garp_simulate -- -j16 -l16
+[0.816s] Invoked command in '/home/omerb/garp7_ws/build/garp_simulate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/omerb/garp7_ws/build/garp_simulate -- -j16 -l16
+[0.817s] Invoking command in '/home/omerb/garp7_ws/build/garp_simulate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/omerb/garp7_ws/build/garp_simulate
+[0.825s] -- Install configuration: ""
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//launch
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//launch/my_world.launch.py
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//config
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//worlds
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//worlds/my_world.sdf
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//models
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//models/my_model
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//models/my_model/model.sdf
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate//models/my_model/model.config
+[0.826s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/ament_index/resource_index/package_run_dependencies/garp_simulate
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/ament_index/resource_index/parent_prefix_path/garp_simulate
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/environment/ament_prefix_path.sh
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/environment/ament_prefix_path.dsv
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/environment/path.sh
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/environment/path.dsv
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/local_setup.bash
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/local_setup.sh
+[0.827s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/local_setup.zsh
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/local_setup.dsv
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/package.dsv
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/ament_index/resource_index/packages/garp_simulate
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/cmake/garp_simulateConfig.cmake
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/cmake/garp_simulateConfig-version.cmake
+[0.828s] -- Installing: /home/omerb/garp7_ws/install/garp_simulate/share/garp_simulate/package.xml
+[0.830s] Invoked command in '/home/omerb/garp7_ws/build/garp_simulate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/omerb/garp7_ws/build/garp_simulate

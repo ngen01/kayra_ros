@@ -1,0 +1,22 @@
+[0.646s] Invoking command in '/home/omerb/garp7_ws/src/garp_tools': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/omerb/garp7_ws/build/garp_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/garp_tools build --build-base /home/omerb/garp7_ws/build/garp_tools/build install --record /home/omerb/garp7_ws/build/garp_tools/install.log --single-version-externally-managed install_data
+[0.842s] running egg_info
+[0.853s] writing ../../build/garp_tools/garp_tools.egg-info/PKG-INFO
+[0.853s] writing dependency_links to ../../build/garp_tools/garp_tools.egg-info/dependency_links.txt
+[0.853s] writing entry points to ../../build/garp_tools/garp_tools.egg-info/entry_points.txt
+[0.853s] writing requirements to ../../build/garp_tools/garp_tools.egg-info/requires.txt
+[0.853s] writing top-level names to ../../build/garp_tools/garp_tools.egg-info/top_level.txt
+[0.875s] reading manifest file '../../build/garp_tools/garp_tools.egg-info/SOURCES.txt'
+[0.875s] writing manifest file '../../build/garp_tools/garp_tools.egg-info/SOURCES.txt'
+[0.875s] running build
+[0.875s] running build_py
+[0.875s] running install
+[0.880s] running install_lib
+[0.892s] running install_data
+[0.892s] running install_egg_info
+[0.907s] removing '/home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools-0.0.0-py3.12.egg-info' (and everything under it)
+[0.907s] Copying ../../build/garp_tools/garp_tools.egg-info to /home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages/garp_tools-0.0.0-py3.12.egg-info
+[0.908s] running install_scripts
+[0.989s] Installing odom_to_tf script to /home/omerb/garp7_ws/install/garp_tools/lib/garp_tools
+[0.989s] Installing teleop_keyboard script to /home/omerb/garp7_ws/install/garp_tools/lib/garp_tools
+[0.989s] writing list of installed files to '/home/omerb/garp7_ws/build/garp_tools/install.log'
+[1.009s] Invoked command in '/home/omerb/garp7_ws/src/garp_tools' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/omerb/garp7_ws/build/garp_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omerb/garp7_ws/install/garp_tools/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/garp_tools build --build-base /home/omerb/garp7_ws/build/garp_tools/build install --record /home/omerb/garp7_ws/build/garp_tools/install.log --single-version-externally-managed install_data

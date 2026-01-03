@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="my_house">
+
+    <!-- Sabit olsun sürüklenmesin -->
+    <static>true</static>
+
+    <link name="link">
+
+      <!-- wall_1 -->
+      <collision name="wall_1_collision">
+        <pose>-2.0 2.0 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 8.0 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_1">
+        <pose>-2.0 2.0 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 8.0 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_2 -->
+      <collision name="wall_2_collision">
+        <pose>1.5 6.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 7.0 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_2">
+        <pose>1.5 6.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 7.0 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_3 -->
+      <collision name="wall_3_collision">
+        <pose>5.0 4.0 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 4.0 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_3">
+        <pose>5.0 4.0 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 4.0 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_4 -->
+      <collision name="wall_4_collision">
+        <pose>3.5 2.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 3.0 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_4">
+        <pose>3.5 2.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 3.0 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_5 -->
+      <collision name="wall_5_collision">
+        <pose>2.0 1.25 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 1.5 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_5">
+        <pose>2.0 1.25 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 1.5 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_6 -->
+      <collision name="wall_6_collision">
+        <pose>2.0 -1.25 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 1.5 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_6">
+        <pose>2.0 -1.25 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 1.5 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_7 -->
+      <collision name="wall_7_collision">
+        <pose>0 -2.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 4 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_7">
+        <pose>0 -2.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 4 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_8 -->
+      <collision name="wall_8_collision">
+        <pose>5.0 -1.5 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 7 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_8">
+        <pose>5.0 -1.5 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 7 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_9 -->
+      <collision name="wall_9_collision">
+        <pose>1.5 -5.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 7 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_9">
+        <pose>1.5 -5.0 1.0 0 0 -1.57</pose>
+        <geometry>
+          <box><size>0.1 7 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- wall_10 -->
+      <collision name="wall_10_collision">
+        <pose>-2.0 -3.5 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 3 2.0</size></box>
+        </geometry>
+      </collision>
+      <visual name="wall_10">
+        <pose>-2.0 -3.5 1.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 3 2.0</size></box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.27 0.07 1</ambient>
+          <diffuse>0.55 0.27 0.07 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- Inertia Rastgele -->
+      <inertial>
+        <mass>1000</mass>
+        <inertia>
+          <ixx>0.005</ixx>
+          <iyy>0.005</iyy>
+          <izz>0.005</izz>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+  </model>
+</sdf>
