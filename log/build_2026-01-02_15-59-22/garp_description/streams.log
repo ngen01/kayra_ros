@@ -1,0 +1,53 @@
+[0.010s] Invoking command in '/home/omerb/garp3_ws/build/garp_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/omerb/garp3_ws/src/garp_description -DCMAKE_INSTALL_PREFIX=/home/omerb/garp3_ws/install/garp_description
+[0.069s] -- The C compiler identification is GNU 13.3.0
+[0.123s] -- The CXX compiler identification is GNU 13.3.0
+[0.145s] -- Detecting C compiler ABI info
+[0.231s] -- Detecting C compiler ABI info - done
+[0.240s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.240s] -- Detecting C compile features
+[0.240s] -- Detecting C compile features - done
+[0.253s] -- Detecting CXX compiler ABI info
+[0.341s] -- Detecting CXX compiler ABI info - done
+[0.349s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.350s] -- Detecting CXX compile features
+[0.350s] -- Detecting CXX compile features - done
+[0.353s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.471s] -- Found Python3: /home/omerb/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.573s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.665s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.665s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.666s] -- Added test 'lint_cmake' to check CMake code style
+[0.666s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.667s] -- Added test 'xmllint' to check XML markup files
+[0.668s] -- Configuring done (0.6s)
+[0.670s] -- Generating done (0.0s)
+[0.672s] -- Build files have been written to: /home/omerb/garp3_ws/build/garp_description
+[0.677s] Invoked command in '/home/omerb/garp3_ws/build/garp_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/omerb/garp3_ws/src/garp_description -DCMAKE_INSTALL_PREFIX=/home/omerb/garp3_ws/install/garp_description
+[0.678s] Invoking command in '/home/omerb/garp3_ws/build/garp_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/omerb/garp3_ws/build/garp_description -- -j16 -l16
+[0.720s] Invoked command in '/home/omerb/garp3_ws/build/garp_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/omerb/garp3_ws/build/garp_description -- -j16 -l16
+[0.731s] Invoking command in '/home/omerb/garp3_ws/build/garp_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/omerb/garp3_ws/build/garp_description
+[0.741s] -- Install configuration: ""
+[0.741s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/launch
+[0.741s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/launch/display.launch.py
+[0.741s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/urdf
+[0.741s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/urdf/main.urdf.xacro
+[0.741s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/urdf/wheels.urdf.xacro
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/config
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/config/gz_bridge.yaml
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/config/g_plugins.urdf.xacro
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/ament_index/resource_index/package_run_dependencies/garp_description
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/ament_index/resource_index/parent_prefix_path/garp_description
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/environment/ament_prefix_path.sh
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/environment/ament_prefix_path.dsv
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/environment/path.sh
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/environment/path.dsv
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/local_setup.bash
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/local_setup.sh
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/local_setup.zsh
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/local_setup.dsv
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/package.dsv
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/ament_index/resource_index/packages/garp_description
+[0.742s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/cmake/garp_descriptionConfig.cmake
+[0.743s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/cmake/garp_descriptionConfig-version.cmake
+[0.743s] -- Installing: /home/omerb/garp3_ws/install/garp_description/share/garp_description/package.xml
+[0.744s] Invoked command in '/home/omerb/garp3_ws/build/garp_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/omerb/garp3_ws/build/garp_description
