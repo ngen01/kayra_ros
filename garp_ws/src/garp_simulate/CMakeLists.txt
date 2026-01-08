@@ -12,11 +12,6 @@ find_package(ros_gz_bridge REQUIRED)
 find_package(nav2_bringup REQUIRED)
 find_package(slam_toolbox REQUIRED)
 
-# Install directories
-install(
-  DIRECTORY launch config worlds models maps
-  DESTINATION share/${PROJECT_NAME}/
-)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
